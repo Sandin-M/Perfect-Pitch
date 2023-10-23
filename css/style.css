@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(45deg, #08001f, #30197d);
+    color: white;
+}
+
+.headers {
+    font-size: 25px;
+    /*display: flex;
+    justify-content: center;*/
+    margin-top: 15px;
+    padding-left: 20px;
+    text-align: center;  /*Is this the right way to position header in center? How do I make Quiz in the middle? */
+}
+
+.paragraphs {
+    font-size: 18px;
+    /*display: flex;
+    justify-content: center;*/
+    margin-top: 35px;
+    text-align: center;
+    padding: 0 15px;
+}
+
+#Diff {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#Inputfield {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px; /*Should I use width attribute instead of margin? Should I manipulate input width directly?*/
+}
+
+.buttons {
+    font-size: 25px;
+    margin: 50px 40px 30px 40px; /*Better way of positioning button*/
+    background-color: rgb(201, 201, 53);
+    color: rgb(212, 208, 208);
+    border-radius: 25px;
+    padding: 0 5px;
+}
+

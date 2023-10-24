@@ -1,102 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Perfect Pitch Quiz</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="headers">
-        <h1>Perfect Pitch Quiz</h1> <!--Do i really use h1 element and then change font?-->
+      <h1>Perfect Pitch Quiz</h1>
+      <!--Do i really use h1 element and then change font?-->
     </div>
 
-<div class="page1 hide">   <!--Page 1 (((Can that div be in line with the body ??)))-->
+    <div class="page1" id="Page1">
+      <!--Page 1 -->
 
-    <div class="paragraphs">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas itaque rem laborum non incidunt 
-            suscipit repellat perferendis minima aliquam ipsum. Blanditiis minima voluptate vel 
-            exercitationem enim veniam fuga. Fugiat ad adipisci magnam repudiandae dolor explicabo 
-            quod maiores corrupti repellendus iste.</p>
-    </div>
+      <div class="paragraphs">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas itaque
+          rem laborum non incidunt suscipit repellat perferendis minima aliquam
+          ipsum. Blanditiis minima voluptate vel exercitationem enim veniam
+          fuga. Fugiat ad adipisci magnam repudiandae dolor explicabo quod
+          maiores corrupti repellendus iste.
+        </p>
+      </div>
 
-    <div id="Diff">
+      <div id="Diff">
         <select name="difficulty" id="difficulty">
-            <option value="">Simple (C,D,E,F,G)</option>
-            <option value="">Advanced (C scale: C,D,E,F,G,A,B)</option>
-            <option value="">Pro (All chromatic notes)</option>
+          <option value="">Difficulty</option>
+          <option value="Simple">Simple (C,D,E,F,G)</option>
+          <option value="Advanced">Advanced (C scale: C,D,E,F,G,A,B)</option>
+          <option value="Pro">Pro (All chromatic notes)</option>
         </select>
-    </div>
+        
+      </div>
 
-    <div id="Inputfield">
+      <div id="Inputfield">
         <label for="inputfield">Input 0 for never-ending quiz</label>
-        <input type="number" id="inputfield">
+        <input type="number" id="inputfield" />
+      </div>
+
+      <button
+        class="buttons"
+        id="Start-Quiz"
+        onclick="addHideClass('Page1'), deleteHideClass('Page2'), doSomething()"
+      >
+        Start Quiz
+      </button>
     </div>
 
-   
-        <button class="buttons">Start Quiz</button>
+    <div class="page2 hide" id="Page2">
+      <!--Page 2-->
 
-</div>
+      <div class="bttn">
+        <button
+          class="button-style"
+          id="Hear-First-Note"
+          onclick="deleteHideClass('Page3'), addHideClass('Page2')"
+        >
+          Hear first note
+        </button>
+      </div>
 
-<div class="page2 hide">   <!--Page 2-->
-
-    <div class="bttn">
-        <button class="button-style">Hear first note</button>
+      <div class="bttn" id="end-quiz-p2">
+        <button
+          class="button-style"
+          onclick="deleteHideClass('Page1') ,addHideClass('Page2')"
+        >
+          End quiz
+        </button>
+      </div>
     </div>
 
-    <div class="bttn" id="end-quiz-p2">
-        <button class="button-style">End quiz</button>
-    </div>
+    <div class="page3 hide" id="Page3">
+      <!--Page 3-->
 
-</div>
-
-<div class="page3 hide">      <!--Page 3-->
-
-    <div class="bttn">
+      <div class="bttn">
         <button class="button-style">Hear again</button>
-    </div>
+      </div>
 
-    <div>
+      <div>
         <h2>Choices</h2>
 
-        <div id="Choices-bttn"> <!--Buttons in here but how many?-->
+        <div id="Choices-bttn">
+          <!--Buttons in here but how many?-->
+          <div class="hide" id="Choice1">
+            <button class="notebutton">C</button>
+            <button class="notebutton">D</button>
+            <button class="notebutton">E</button>
+            <button class="notebutton">F</button>
+            <button class="notebutton">G</button>
+          </div>
 
+          <div class="hide" id="Choice2">
+            <button class="notebutton">C</button>
+            <button class="notebutton">D</button>
+            <button class="notebutton">E</button>
+            <button class="notebutton">F</button>
+            <button class="notebutton">G</button>
+            <button class="notebutton">A</button>
+            <button class="notebutton">B</button>
+          </div>
+
+          <div class="hide" id="Choice3">
+            <button class="notebutton">C</button>
+            <button class="notebutton">D</button>
+            <button class="notebutton">E</button>
+            <button class="notebutton">F</button>
+            <button class="notebutton">G</button>
+            <button class="notebutton">G</button>
+            <button class="notebutton">G</button>
+            <button class="notebutton">G</button>
+            <button class="notebutton">G</button>
+            <button class="notebutton">G</button>
+            <button class="notebutton">G</button>
+            <button class="notebutton">G</button>
+          </div>
         </div>
+      </div>
 
+      <div id="counter"><!--How do I create counters ?--></div>
+
+      <div class="bttn">
+        <button
+          class="button-style"
+          onclick="deleteHideClass('Page4') ,addHideClass('Page3')"
+        >
+          End quiz
+        </button>
+      </div>
     </div>
 
-    <div id="counter">     <!--How do I create counters ?-->
-    
+    <div class="page4 hide" id="Page4">
+      <!--Page 4-->
+
+      <h2>Finished!</h2>
+
+      <div id="final-counter"><!--How do I create counters?--></div>
+
+      <div class="paragraphs">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio
+          obcaecati eius quis fuga ipsum sed consequatur, inventore numquam
+          voluptas sit?
+        </p>
+      </div>
+
+      <div class="bttn">
+        <button
+          class="button-style"
+          onclick="deleteHideClass('Page1') ,addHideClass('Page4') "
+        >
+          Try again
+        </button>
+      </div>
     </div>
-
-    <div class="bttn">
-        <button class="button-style">End quiz</button>
-    </div>
-
-</div>
-
-<div class="page4"> <!--Page 4-->
-
-    <h2>Finished!</h2>
-
-    <div id="final-counter"> <!--How do I create counters?-->
-
-    </div>
-
-    <div class="paragraphs">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-            Distinctio obcaecati eius quis fuga ipsum sed consequatur, 
-            inventore numquam voluptas sit?</p>
-    </div>
-
-    <div class="bttn">
-        <button class="button-style">Try again</button>
-    </div>
-     
-</div>
-    
-    
-</body>
+  </body>
+  <script src="main.js"></script>
 </html>

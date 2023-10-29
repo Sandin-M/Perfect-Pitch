@@ -8,9 +8,12 @@
     <title>Perfect Pitch Quiz</title>
 
     <!--Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="headers">
@@ -38,7 +41,6 @@
           <option value="Advanced">Advanced (C scale: C,D,E,F,G,A,B)</option>
           <option value="Pro">Pro (All chromatic notes)</option>
         </select>
-        
       </div>
 
       <div id="Inputfield">
@@ -48,13 +50,13 @@
 
       <div class="button-div">
         <button
-        class="buttons button-style"
-        id="Start-Quiz"
-        onclick="addHideClass('Page1'), deleteHideClass('Page2'), doSomething()">
-        Start Quiz
+          class="buttons button-style"
+          id="Start-Quiz"
+          onclick="addHideClass('Page1'), deleteHideClass('Page2'), doSomething()"
+        >
+          Start Quiz
         </button>
       </div>
-
     </div>
 
     <div class="page2 hide" id="Page2">
@@ -64,7 +66,7 @@
         <button
           class="button-style"
           id="Hear-First-Note"
-          onclick="deleteHideClass('Page3'), addHideClass('Page2')"
+          onclick="deleteHideClass('Page3'), addHideClass('Page2'), playFirstSound()"
         >
           Hear first note
         </button>
@@ -91,38 +93,43 @@
         <h2>Choices</h2>
 
         <div id="Choices-bttn">
-          <!--Buttons in here but how many?-->
-          <div class="hide choice-div" id="Choice1">
-            <button class="notebutton">C</button>
-            <button class="notebutton">D</button>
-            <button class="notebutton">E</button>
-            <button class="notebutton">F</button>
-            <button class="notebutton">G</button>
+          <div class="hide" id="Choice1">
+            <div class="choice-div">
+              <button class="notebutton" onclick="playNote('C')">C</button>
+              <button class="notebutton" onclick="playNote('D')">D</button>
+              <button class="notebutton" onclick="playNote('E')">E</button>
+              <button class="notebutton" onclick="playNote('F')">F</button>
+              <button class="notebutton" onclick="playNote('G')">G</button>
+            </div>
           </div>
 
-          <div class="hide choice-div" id="Choice2">
-            <button class="notebutton">C</button>
-            <button class="notebutton">D</button>
-            <button class="notebutton">E</button>
-            <button class="notebutton">F</button>
-            <button class="notebutton">G</button>
-            <button class="notebutton">A</button>
-            <button class="notebutton">B</button>
+          <div class="hide" id="Choice2">
+            <div class="choice-div">
+              <button class="notebutton" onclick="playNote('C')">C</button>
+              <button class="notebutton" onclick="playNote('D')">D</button>
+              <button class="notebutton" onclick="playNote('E')">E</button>
+              <button class="notebutton" onclick="playNote('F')">F</button>
+              <button class="notebutton" onclick="playNote('G')">G</button>
+              <button class="notebutton" onclick="playNote('A')">A</button>
+              <button class="notebutton" onclick="playNote('B')">B</button>
+            </div>
           </div>
 
-          <div class="hide choice-div" id="Choice3">
-            <button class="notebutton">C</button>
-            <button class="notebutton">C#/Db</button>
-            <button class="notebutton">E</button>
-            <button class="notebutton">F</button>
-            <button class="notebutton">F#/Gb</button>
-            <button class="notebutton">G</button>
-            <button class="notebutton">G#/Ab</button>
-            <button class="notebutton">A</button>
-            <button class="notebutton">A#/Bb</button>
-            <button class="notebutton">B</button>
-            <button class="notebutton">D</button>
-            <button class="notebutton">D#/Eb</button>
+          <div class="hide" id="Choice3">
+            <div class="choice-div">
+              <button class="notebutton" onclick="playNote('C')">C</button>
+              <button class="notebutton" onclick="playNote('C#')">C#/Db</button>
+              <button class="notebutton" onclick="playNote('E')">E</button>
+              <button class="notebutton" onclick="playNote('F')">F</button>
+              <button class="notebutton" onclick="playNote('F#')">F#/Gb</button>
+              <button class="notebutton" onclick="playNote('G')">G</button>
+              <button class="notebutton" onclick="playNote('G#')">G#/Ab</button>
+              <button class="notebutton" onclick="playNote('A')">A</button>
+              <button class="notebutton" onclick="playNote('A#')">A#/Bb</button>
+              <button class="notebutton" onclick="playNote('B')">B</button>
+              <button class="notebutton" onclick="playNote('D')">D</button>
+              <button class="notebutton" onclick="playNote('D#')">D#/Eb</button>
+            </div>
           </div>
         </div>
       </div>

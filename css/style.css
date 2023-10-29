@@ -79,7 +79,8 @@ h2 {
 }
 
 .choice-div {
-    margin: 20px 40px;  /*Is it better to use width instead of margin left right= */
+    margin: 20px 40px;  
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }

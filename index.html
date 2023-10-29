@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Perfect Pitch Quiz</title>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="headers">
@@ -41,19 +46,21 @@
         <input type="number" id="inputfield" />
       </div>
 
-      <button
-        class="buttons"
+      <div class="button-div">
+        <button
+        class="buttons button-style"
         id="Start-Quiz"
-        onclick="addHideClass('Page1'), deleteHideClass('Page2'), doSomething()"
-      >
+        onclick="addHideClass('Page1'), deleteHideClass('Page2'), doSomething()">
         Start Quiz
-      </button>
+        </button>
+      </div>
+
     </div>
 
     <div class="page2 hide" id="Page2">
       <!--Page 2-->
 
-      <div class="bttn">
+      <div class="button-div">
         <button
           class="button-style"
           id="Hear-First-Note"
@@ -63,7 +70,7 @@
         </button>
       </div>
 
-      <div class="bttn" id="end-quiz-p2">
+      <div class="button-div" id="end-quiz-p2">
         <button
           class="button-style"
           onclick="deleteHideClass('Page1') ,addHideClass('Page2')"
@@ -76,7 +83,7 @@
     <div class="page3 hide" id="Page3">
       <!--Page 3-->
 
-      <div class="bttn">
+      <div class="button-div">
         <button class="button-style">Hear again</button>
       </div>
 
@@ -122,7 +129,7 @@
 
       <div id="counter"><!--How do I create counters ?--></div>
 
-      <div class="bttn">
+      <div class="button-div">
         <button
           class="button-style"
           onclick="deleteHideClass('Page4') ,addHideClass('Page3')"
@@ -147,7 +154,7 @@
         </p>
       </div>
 
-      <div class="bttn">
+      <div class="button-div">
         <button
           class="button-style"
           onclick="deleteHideClass('Page1') ,addHideClass('Page4') "

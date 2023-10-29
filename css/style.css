@@ -67,3 +67,15 @@ h2 {
     text-align: center;
     margin-top: 50px;
 }
+
+.notebutton {
+    font-size: 30px; /*Is px the best choice for size considering responsive design?*/
+    color: white;
+    background-color: rgb(7, 7, 163);
+}
+
+.choice-div {
+    margin: 20px 40px;  /*Is it better to use width instead of margin left right= */
+    display: flex;
+    justify-content: space-between;
+}

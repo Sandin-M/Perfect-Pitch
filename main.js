@@ -1,3 +1,4 @@
+
 function addHideClass(page) {
     let page1 = document.getElementById(page);
     page1.classList.add("hide");
@@ -25,9 +26,13 @@ function doSomething() {
 }
 
 
-function playFirstNote(){
-    
-    
+function playFirstSound() {
+
+    let selector = document.getElementById("difficulty").value;
+    let randomeNumber = Math.floor(Math.random() * 12);
+    console.log(randomeNumber);
+
+
 }
 
 

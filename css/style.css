@@ -5,7 +5,7 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(45deg, #08001f, #30197d);
+    background: linear-gradient(45deg, #060017, #5e34e5);
     color: white;
 }
 
@@ -19,6 +19,7 @@ body {
 }
 
 .paragraphs {
+    font-family: 'Mulish', sans-serif;
     font-size: 18px;
     /*display: flex;
     justify-content: center;*/
@@ -48,9 +49,11 @@ body {
 }
 
 .button-style {
+    width: 150px; /*Is this ok considering responsive design*/
+    font-family: 'Mulish', sans-serif;
     font-size: 25px;
-    background-color: rgb(201, 201, 53);
-    color: rgb(212, 208, 208);
+    background-color: rgb(235, 235, 11);
+    color: rgb(139, 15, 196);
     border-radius: 25px;
     padding: 0 5px; 
 }
@@ -68,6 +71,7 @@ h1 {
 }
 
 h2 {
+    font-family: 'Mulish', sans-serif;
     text-align: center;
     margin-top: 50px;
 }
@@ -79,6 +83,7 @@ h2 {
 }
 
 .choice-div {
+    font-family: 'Mulish', sans-serif;
     margin: 20px 40px;  
     display: flex;
     justify-content: space-between;

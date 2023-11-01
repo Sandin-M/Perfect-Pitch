@@ -8,11 +8,12 @@
     <title>Perfect Pitch Quiz</title>
 
     <!--Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Mulish:wght@300&display=swap"
-    rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Mulish:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="headers">
@@ -25,13 +26,15 @@
 
       <div class="paragraphs">
         <p>
-          This quiz is designed to train your ear to be able to to recognize what in music is commonly known as "pitch". 
-          It refers to the specific quality or identity of each note in the musical alphabet.<br>
-          In this exercise, you will hear a single note. Your goal is to identify the name of each note. 
-          For best results, practice a little bit each day. Have fun!
+          This quiz is designed to train your ear to be able to to recognize
+          what in music is commonly known as "pitch". It refers to the specific
+          quality or identity of each note in the musical alphabet.<br />
+          In this exercise, you will hear a single note. Your goal is to
+          identify the name of each note. For best results, practice a little
+          bit each day. Have fun!
         </p>
       </div>
-
+      
       <div id="Diff">
         <select name="difficulty" id="difficulty">
           <option value="">Difficulty</option>
@@ -50,7 +53,7 @@
         <button
           class="buttons button-style"
           id="Start-Quiz"
-          onclick="addHideClass('Page1'), deleteHideClass('Page2'), doSomething()"
+          onclick="addHideClass('Page1'), deleteHideClass('Page2'), showButtonsDependingOnDiffivculty()"
         >
           Start Quiz
         </button>
@@ -84,7 +87,7 @@
       <!--Page 3-->
 
       <div class="button-div">
-        <button class="button-style">Hear again</button>
+        <button onclick="playAgain()" class="button-style">Hear again</button>
       </div>
 
       <div>
@@ -149,16 +152,20 @@
 
       <h2>Finished!</h2>
 
-      <div id="final-counter">  <!--How do I create counters?-->
-        <p class="paragraphs">You identified <span></span> out of <span></span> correctly. You accuracy is <span></span> .</p>
+      <div id="final-counter">
+        <!--How do I create counters?-->
+        <p class="paragraphs">
+          You identified <span></span> out of <span></span> correctly. You
+          accuracy is <span></span> .
+        </p>
       </div>
 
       <div class="paragraphs">
         <p>
-          Thank you for taking the Perfect Pitch Quiz, we hope you had fun!
-          If you would like to improve even further, make sure you bookmark this page and practice a little bit each day.<br>
+          Thank you for taking the Perfect Pitch Quiz, we hope you had fun! If
+          you would like to improve even further, make sure you bookmark this
+          page and practice a little bit each day.<br />
           See you soon !
-          
         </p>
       </div>
 

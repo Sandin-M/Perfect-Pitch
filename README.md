@@ -1,39 +1,41 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# perfect pitch
 
-Welcome,
+Perfect Pitch Quiz is an application that is designed to train musicians and anyone else who is interested in so called "ear training".
+The application presents the user with as question in form of a note. The user then has to then make a choice out of the possible options.
+If the answer is right, the button turns green, if it is wrong, it turns red.
+There is a Next button to prommpt the user to the next questions, and there is a counter which counts the correct and incorrect answers.
+The user can chooce the number of questions, or je can choose an unlimited number of questions.
+![mock up](assets/perfect-pitch-homepage.JPG)
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Features
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+- Homepage: Introduces users to perfect-pitch,There is also a select dropdown for users to select the level of difficulty they want(simple, Advanced and Pro level), they are also able to input the number of Questions they would like to answer in the input field.![Home page](assets/perfect-pitch-homepage.JPG)
 
-## Codeanywhere Reminders
+- Hear First Note page(page2): Displays two buttons named Hear first note nd end quiz. The hear first note button takes the user to the next page when clicked and enables the user to listen to the first pitch in the level selected by the user while the end quiz button enables the user to end the quiz and start allover.
+![page 2](assets/perfect-pitch-page2.JPG)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+- Choices page(page3): it features the choices button and enable users to select the correct answer. When a user selects an incorrect choice, the button turns red but turns green if their choice is correct. There are also two other buttons: Hear again button which enables the user to listen to pitch over and over again when clicked and the Hear Next button which enables the user to listen to the next pitch.
+It also has an end quiz button enables the user to end the quiz and start allover.
+![choices page](assets/choices-page.JPG)
 
-`python3 -m http.server`
+- Finished Page(page4): Displays a Thank you message to the user and a try again button ![Finished page](assets/finished-page.JPG)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## Validator Testing
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+- HTML: while testing my index.html file through the official <a href="https://validator.w3.org/">W3C validator</a>. it discovered an error on line 164 of my code which was a result of putting the script tag outside the body tag.  ![w3c-validator](assets/w3c-validtor.JPG)
+However I have fixed the error and the validator confirmed that I have no errors or warning to show.
+![W3c validator](assets/w3c-validator-no-errors.JPG)
 
-`http_server`
+- CSS: I tested my style.css file and No errors were found when passing through the official <a href="https://jigsaw.w3.org/css-validator/">(Jigsaw) validator</a>
+![jigsaw validator](assets/jigsaw-validator.JPG)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+-javascript: I tested my main.js file through the official <a href="https://jshint.com">(Jshint) Validator</a>  and it detected some unused variables and undefined variables. ![jshint validator](assets/jshint-validator.JPG).
+However, I have fixed the errors and it passed through validation without errors.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## Acknowledgement
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  Special Thanks to my teacher Christian Moller who put me through some of the logics
 
-To log into the Heroku toolbelt CLI:
+## Credits
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+- Audio files: <a href="https://freesound.org/">Pixabay</a> <br>

@@ -15,7 +15,8 @@ body {
     justify-content: center;*/
     margin-top: 15px;
     padding-left: 20px;
-    text-align: center;  /*Is this the right way to position header in center? How do I make Quiz in the middle? */
+    text-align: center;
+    /*Is this the right way to position header in center? How do I make Quiz in the middle? */
 }
 
 .paragraphs {
@@ -29,7 +30,10 @@ body {
 }
 
 #Diff {
+    margin-left: 12vw;
+    margin-right: 12vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-top: 20px;
 }
@@ -39,7 +43,8 @@ body {
     flex-direction: column;
     margin-top: 50px;
     margin-left: 30px;
-    margin-right: 30px; /*Should I use width attribute instead of margin? Should I manipulate input width directly?*/
+    margin-right: 30px;
+    /*Should I use width attribute instead of margin? Should I manipulate input width directly?*/
 }
 
 .button-div {
@@ -49,13 +54,14 @@ body {
 }
 
 .button-style {
-    width: 150px; /*Is this ok considering responsive design*/
+    width: 150px;
+    /*Is this ok considering responsive design*/
     font-family: 'Mulish', sans-serif;
     font-size: 25px;
     background-color: rgb(235, 235, 11);
     color: rgb(139, 15, 196);
     border-radius: 25px;
-    padding: 0 5px; 
+    padding: 0 5px;
 }
 
 #end-quiz-p2 {
@@ -77,14 +83,15 @@ h2 {
 }
 
 .notebutton {
-    font-size: 30px; /*Is px the best choice for size considering responsive design?*/
+    font-size: 30px;
+    /*Is px the best choice for size considering responsive design?*/
     color: white;
     background-color: rgb(7, 7, 163);
 }
 
 .choice-div {
     font-family: 'Mulish', sans-serif;
-    margin: 20px 40px;  
+    margin: 20px 40px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

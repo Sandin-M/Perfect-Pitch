@@ -1,183 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Perfect Pitch Quiz</title>
 
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Mulish:wght@300&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Mulish:wght@300&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
     <div class="headers">
-      <h1>Perfect Pitch Quiz</h1>
-      <!--Do i really use h1 element and then change font?-->
+        <h1>Perfect Pitch Quiz</h1>
+        <!--Do i really use h1 element and then change font?-->
     </div>
 
     <div class="page1" id="Page1">
-      <!--Page 1 -->
+        <!--Page 1 -->
 
-      <div class="paragraphs">
-        <p>
-          This quiz is designed to train your ear to be able to to recognize
-          what in music is commonly known as "pitch". It refers to the specific
-          quality or identity of each note in the musical alphabet.<br />
-          In this exercise, you will hear a single note. Your goal is to
-          identify the name of each note. For best results, practice a little
-          bit each day. Have fun!
-        </p>
-      </div>
-      
-      <div id="Diff">
-        <select name="difficulty" id="difficulty">
-          <option value="">Difficulty</option>
-          <option value="Simple">Simple (C,D,E,F,G)</option>
-          <option value="Advanced">Advanced (C scale: C,D,E,F,G,A,B)</option>
-          <option value="Pro">Pro (All chromatic notes)</option>
-        </select>
-      </div>
+        <div class="paragraphs">
+            <p>
+                This quiz is designed to train your ear to be able to to recognize
+                what in music is commonly known as "pitch". It refers to the specific
+                quality or identity of each note in the musical alphabet.<br />
+                In this exercise, you will hear a single note. Your goal is to
+                identify the name of each note. For best results, practice a little
+                bit each day. Have fun!
+            </p>
+        </div>
 
-      <div id="Inputfield">
-        <label for="inputfield">Input 0 for never-ending quiz</label>
-        <input type="number" id="inputfield" />
-      </div>
+        <div id="Diff">
+            <label for="difficulty">Difficulty</label>
+            <select name="difficulty" id="difficulty">
+                <option value="Simple">Simple (C,D,E,F,G)</option>
+                <option value="Advanced">Advanced (C scale: C,D,E,F,G,A,B)</option>
+                <option value="Pro">Pro (All chromatic notes)</option>
+            </select>
+        </div>
 
-      <div class="button-div">
-        <button
-          class="buttons button-style"
-          id="Start-Quiz"
-          onclick="addHideClass('Page1'), deleteHideClass('Page2'), showButtonsDependingOnDiffivculty()"
-        >
-          Start Quiz
-        </button>
-      </div>
+        <div id="Inputfield">
+            <label for="inputfield">Number of questions</label>
+            <input type="number" id="inputfield" placeholder="Leave blank for never ending quiz" />
+        </div>
+
+        <div class="button-div">
+            <button class="buttons button-style" id="Start-Quiz"
+                onclick="addHideClass('Page1'), deleteHideClass('Page2'), showButtonsDependingOnDiffivculty()">
+                Start Quiz
+            </button>
+        </div>
     </div>
 
     <div class="page2 hide" id="Page2">
-      <!--Page 2-->
+        <!--Page 2-->
 
-      <div class="button-div">
-        <button
-          class="button-style"
-          id="Hear-First-Note"
-          onclick="deleteHideClass('Page3'), addHideClass('Page2'), playFirstSound()"
-        >
-          Hear first note
-        </button>
-      </div>
+        <div class="button-div">
+            <button class="button-style" id="Hear-First-Note"
+                onclick="deleteHideClass('Page3'), addHideClass('Page2'), playFirstSound()">
+                Hear first note
+            </button>
+        </div>
 
-      <div class="button-div" id="end-quiz-p2">
-        <button
-          class="button-style"
-          onclick="deleteHideClass('Page1') ,addHideClass('Page2')"
-        >
-          End quiz
-        </button>
-      </div>
+        <div class="button-div" id="end-quiz-p2">
+            <button class="button-style" onclick="deleteHideClass('Page1') ,addHideClass('Page2')">
+                End quiz
+            </button>
+        </div>
     </div>
 
     <div class="page3 hide" id="Page3">
-      <!--Page 3-->
-
-      <div class="button-div">
-        <button onclick="playAgain()" class="button-style">Hear again</button>
-      </div>
-
-      <div>
-        <h2>Choices</h2>
-
-        <div id="Choices-bttn">
-          <div class="hide" id="Choice1">
-            <div class="choice-div">
-              <button class="notebutton" onclick="playNote('C')">C</button>
-              <button class="notebutton" onclick="playNote('D')">D</button>
-              <button class="notebutton" onclick="playNote('E')">E</button>
-              <button class="notebutton" onclick="playNote('F')">F</button>
-              <button class="notebutton" onclick="playNote('G')">G</button>
-            </div>
-          </div>
-
-          <div class="hide" id="Choice2">
-            <div class="choice-div">
-              <button class="notebutton" onclick="playNote('C')">C</button>
-              <button class="notebutton" onclick="playNote('D')">D</button>
-              <button class="notebutton" onclick="playNote('E')">E</button>
-              <button class="notebutton" onclick="playNote('F')">F</button>
-              <button class="notebutton" onclick="playNote('G')">G</button>
-              <button class="notebutton" onclick="playNote('A')">A</button>
-              <button class="notebutton" onclick="playNote('B')">B</button>
-            </div>
-          </div>
-
-          <div class="hide" id="Choice3">
-            <div class="choice-div">
-              <button class="notebutton" onclick="playNote('C')">C</button>
-              <button class="notebutton" onclick="playNote('C#')">C#/Db</button>
-              <button class="notebutton" onclick="playNote('E')">E</button>
-              <button class="notebutton" onclick="playNote('F')">F</button>
-              <button class="notebutton" onclick="playNote('F#')">F#/Gb</button>
-              <button class="notebutton" onclick="playNote('G')">G</button>
-              <button class="notebutton" onclick="playNote('G#')">G#/Ab</button>
-              <button class="notebutton" onclick="playNote('A')">A</button>
-              <button class="notebutton" onclick="playNote('A#')">A#/Bb</button>
-              <button class="notebutton" onclick="playNote('B')">B</button>
-              <button class="notebutton" onclick="playNote('D')">D</button>
-              <button class="notebutton" onclick="playNote('D#')">D#/Eb</button>
-            </div>
-          </div>
+        <!--Page 3-->
+        <p id="questionCounter"></p>
+        <div class="button-div">
+            <button onclick="playAgain()" class="button-style">Hear again</button>
+            <button id="Next-Question" class="button-style">Hear Next</button>
         </div>
-      </div>
 
-      <div id="counter"><!--How do I create counters ?--></div>
+        <div>
+            <h2>Choices</h2>
 
-      <div class="button-div">
-        <button
-          class="button-style"
-          onclick="deleteHideClass('Page4') ,addHideClass('Page3')"
-        >
-          End quiz
-        </button>
-      </div>
+            <div id="Choices-bttn">
+                <div class="hide" id="Choice1">
+                    <div class="choice-div div1">
+                        <button class="notebutton" onclick="playNote('C')">C</button>
+                        <button class="notebutton" onclick="playNote('D')">D</button>
+                        <button class="notebutton" onclick="playNote('E')">E</button>
+                        <button class="notebutton" onclick="playNote('F')">F</button>
+                        <button class="notebutton" onclick="playNote('G')">G</button>
+                    </div>
+                    <p id="result"></p>
+                </div>
+
+                <div class="hide" id="Choice2">
+                    <div class="choice-div div2">
+                        <button class="notebutton" onclick="playNote('C')">C</button>
+                        <button class="notebutton" onclick="playNote('D')">D</button>
+                        <button class="notebutton" onclick="playNote('E')">E</button>
+                        <button class="notebutton" onclick="playNote('F')">F</button>
+                        <button class="notebutton" onclick="playNote('G')">G</button>
+                        <button class="notebutton" onclick="playNote('A')">A</button>
+                        <button class="notebutton" onclick="playNote('B')">B</button>
+                    </div>
+                    <p id="result2"></p>
+                </div>
+
+                <div class="hide" id="Choice3">
+                    <div class="choice-div div3">
+                        <button class="notebutton" onclick="playNote('C')">C</button>
+                        <button class="notebutton" onclick="playNote('C#/Db')">C#/Db</button>
+                        <button class="notebutton" onclick="playNote('E')">E</button>
+                        <button class="notebutton" onclick="playNote('F')">F</button>
+                        <button class="notebutton" onclick="playNote('F#/Gb')">F#/Gb</button>
+                        <button class="notebutton" onclick="playNote('G')">G</button>
+                        <button class="notebutton" onclick="playNote('G#/Ab')">G#/Ab</button>
+                        <button class="notebutton" onclick="playNote('A')">A</button>
+                        <button class="notebutton" onclick="playNote('A#/Bb')">A#/Bb</button>
+                        <button class="notebutton" onclick="playNote('B')">B</button>
+                        <button class="notebutton" onclick="playNote('D')">D</button>
+                        <button class="notebutton" onclick="playNote('D#/Eb')">D#/Eb</button>
+                    </div>
+                    <p id="result3"></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="correctCounter">
+            <!--How do I create counters ?-->
+        </div>
+        <div id="incorrectCounter">
+            <!--How do I create counters ?-->
+        </div>
+        <div class="button-div">
+            <button class="button-style" onclick="deleteHideClass('Page4') ,addHideClass('Page3')">
+                End quiz
+            </button>
+        </div>
     </div>
 
     <div class="page4 hide" id="Page4">
-      <!--Page 4-->
+        <!--Page 4-->
 
-      <h2>Finished!</h2>
+        <h2>Finished!</h2>
 
-      <div id="final-counter">
-        <!--How do I create counters?-->
-        <p class="paragraphs">
-          You identified <span></span> out of <span></span> correctly. You
-          accuracy is <span></span> .
-        </p>
-      </div>
 
-      <div class="paragraphs">
-        <p>
-          Thank you for taking the Perfect Pitch Quiz, we hope you had fun! If
-          you would like to improve even further, make sure you bookmark this
-          page and practice a little bit each day.<br />
-          See you soon !
-        </p>
-      </div>
+        <div class="paragraphs">
+            <p>
+                Thank you for taking the Perfect Pitch Quiz, we hope you had fun! If
+                you would like to improve even further, make sure you bookmark this
+                page and practice a little bit each day.<br />
+                See you soon !
+            </p>
+        </div>
 
-      <div class="button-div">
-        <button
-          class="button-style"
-          onclick="deleteHideClass('Page1') ,addHideClass('Page4') "
-        >
-          Try again
-        </button>
-      </div>
+        <div class="button-div">
+            <button class="button-style" onclick="deleteHideClass('Page1') ,addHideClass('Page4'), tryAgain() ">
+                Try again
+            </button>
+        </div>
     </div>
-  </body>
-  <script src="main.js"></script>
+    <script src="main.js"></script>
+</body>
+
+
 </html>

@@ -38,4 +38,4 @@ However, I have fixed the errors and it passed through validation without errors
 
 ## Credits
 
-- Audio files: <a href="https://freesound.org/">Downloaded from Freesound.org from the user: "pinkyfinger"</a> <br>
+- Audio files: Downloaded from <a href="https://freesound.org/">Freesound.org</a> <br>

@@ -34,7 +34,8 @@ However, I have fixed the errors and it passed through validation without errors
 
 ## Acknowledgement
 
-  Special Thanks to my teacher Christian Moller who put me through some of the logics
+  Special Thanks to my teacher Christian Moller with whom I have constructed the logic and written the Javascript code
+  Special Thanks to Funbi Yusuf for writing the README.md
 
 ## Credits
 
